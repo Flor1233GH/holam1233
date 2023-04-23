@@ -10,5 +10,8 @@ COPY . /app
 # Install the application dependencies
 RUN npm install
 
+#dockerfile debe exponer un puerto tcp
+RUN -p 8080:80 -p 3000:3000
+
 # Define the entry point for the container
 CMD ["npm", "start"]
