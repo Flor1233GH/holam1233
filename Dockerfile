@@ -10,7 +10,7 @@ COPY . /app
 # Install the application dependencies
 RUN npm install
 
-#dockerfile debe exponer un puerto tcp
+#dockerfile debe exponer un puerto  tcp
 RUN --publish 8080:8080 docker-gs-ping
 
 # Define the entry point for the container
