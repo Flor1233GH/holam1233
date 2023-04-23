@@ -11,7 +11,7 @@ COPY . /app
 RUN npm install
 
 #dockerfile debe exponer un puerto tcp
-RUN -p 8080:80 -p 3000:3000
+RUN --publish 8080:8080 docker-gs-ping
 
 # Define the entry point for the container
 CMD ["npm", "start"]
